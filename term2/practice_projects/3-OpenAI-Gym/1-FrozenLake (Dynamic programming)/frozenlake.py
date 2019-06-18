@@ -110,7 +110,8 @@ class FrozenLakeEnv(discrete.DiscreteEnv):
                             done = bytes(newletter) in b'GH'
                             rew = float(newletter == b'G')
                             li.append((1.0, newstate, rew, done))
-        
+
+        # Sai: 28-05-2019
         # obtain one-step dynamics for dynamic programming setting
         self.P = P
 
